@@ -1,6 +1,5 @@
-# price_prediction
 
-Case Study on Tractor Pricing
+Price Prediction on Tractor Pricing
 ======================
 
 
@@ -21,11 +20,14 @@ target values.
 
 This loss function is sensitive to the percentage different between actual and predicted values. This is intended to avoid large errors simply becuase of higher prices if other metrics based on absolute errors were used.
 
+Highlights of this Case Study
+======================
+
 Elastic Net was initially used for the simplicity of linear models, but linear realtionship was not apparent, result in an error rate of around 0.5. Random Forest had a better error rate of 0.32. Cross validation was also used to tune the parameters, but the default parameters had the best result.
 
 During the data exploration, there was an interesting discovery regarding age. Prices decrease as age increases until machines are antique (> 60). Antique machines were of a small population with higher prices. This dataset also had negative ages and ages over 1000 years. These rows were removed. Please see details in code.
 
-(images/Sales_Price_By_Age.png)
+![Sale Price by Age](images/Sales_Price_By_Age.png)
 
 * Data for this case study comes from Galvanize 
 https://github.com/gSchool/dsi-regression-case-study
