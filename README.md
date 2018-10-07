@@ -1,21 +1,17 @@
 # price_prediction
 
-Regression Case Study
+Case Study on Tractor Pricing
 ======================
 
-In today's exercise you'll get a chance to try some of what you've learned
-about supervised learning on a real-world problem.
 
-The goal of the contest is to predict the sale price of a particular piece of
-heavy equipment at auction based on its usage, equipment type, and
-configuration.  The data is sourced from auction result postings and includes
-information on usage and equipment configurations.
-
+The goal is to predict the sale price of a particular piece of
+tractor at auction based on its usage, equipment type, and
+configuration.  The data is sourced from auction result postings and includes information on usage and equipment configurations.
 
 
 Evaluation
 ======================
-The evaluation of your model will be based on Root Mean Squared Log Error.
+The evaluation of the model will be based on Root Mean Squared Log Error.
 Which is computed as follows:
 
 ![Root Mean Squared Logarithmic Error](images/rmsle.png)
@@ -23,13 +19,14 @@ Which is computed as follows:
 where *p<sub>i</sub>* are the predicted values and *a<sub>i</sub>* are the
 target values.
 
-Note that this loss function is sensitive to the *ratio* of predicted values to
-the actual values, a prediction of 200 for an actual value of 100 contributes
-approximately the same amount to the loss as a prediction of 2000 for an actual
-value of 1000.  To convince yourself of this, recall that a difference of
-logarithms is equal to a single logarithm of a ratio, and rewrite each summand
-as a single logarithm of a ratio.
+This loss function is sensitive to the percentage different between actual and predicted values. This is intended to avoid large errors simply becuase of higher prices if other metrics based on absolute errors were used.
 
-Data for this case study comes from Galvanize 
+Elastic Net was initially used for the simplicity of linear models, but linear realtionship was not apparent, result in an error rate of around 0.5. Random Forest had a better error rate of 0.32. Cross validation was also used to tune the parameters, but the default parameters had the best result.
+
+During the data exploration, there was an interesting discovery regarding age. Prices decrease as age increases until machines are antique (> 60). Antique machines were of a small population with higher prices. This dataset also had negative ages and ages over 1000 years. These rows were removed. Please see details in code.
+
+(images/Sales_Price_By_Age.png)
+
+* Data for this case study comes from Galvanize 
 https://github.com/gSchool/dsi-regression-case-study
 
