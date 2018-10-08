@@ -1,5 +1,5 @@
 
-Price Prediction on Tractor Pricing
+Price Prediction on Tractor
 ======================
 
 
