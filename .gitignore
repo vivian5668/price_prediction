@@ -39,3 +39,4 @@ Thumbs.db
 data/Train.csv
 data/test.csv
 *.pyc
+.ipynb_checkpoints

@@ -23,7 +23,7 @@ This loss function is sensitive to the percentage difference between actual and 
 Highlights of this Case Study
 ======================
 
-Elastic Net was initially used for the simplicity of linear models, but linear realtionship was not apparent, resulting in an error rate of around 0.55. Random Forest had a better error rate of 0.32. Cross validation was also used to tune the parameters, but the default parameters had the best result.
+Elastic Net was initially used for the simplicity of linear models, but linear realtionship was not apparent, resulting in an RMSLE of around 0.55. Random Forest had a lower RMSLE of 0.32. Cross validation was also used to tune the parameters, but the default parameters had the best result.
 
 During the data exploration, there was an interesting discovery regarding age of equipments. Prices decrease as age increases until machines are antique (> 60). Antique machines were of a small population with higher prices. This dataset also had negative ages and ages over 1000 years. These rows were removed. Please see details in code.
 
