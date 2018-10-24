@@ -2,6 +2,9 @@
 Price Prediction on Tractor
 ======================
 
+View jupyter notebook here
+https://nbviewer.jupyter.org/github/vivian5668/price_prediction/blob/master/price_prediction.ipynb
+
 
 The goal is to predict the sale price of a particular piece of
 tractor at auction based on its usage, equipment type, and
